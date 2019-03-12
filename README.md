@@ -38,7 +38,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had some errors with the gradle file for the project initially, but I resolved it by downgrading the gradle version. I would have liked to add custom images to the app as well to improve the UI, but was not sure how. I did however, implement a "detailed" version of a tweet when tapped on in the timeline by using a similar method to the last assignment, by creating a new activity and passing off the tweet as a parcelable object.
 
 ## Open-source libraries used
 
