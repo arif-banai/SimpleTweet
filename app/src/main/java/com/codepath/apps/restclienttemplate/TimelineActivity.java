@@ -83,6 +83,9 @@ public class TimelineActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 Log.d("TwitterClient", "Content is being refreshed");
+                //Reset lowestTweetId before refreshing page
+                //to insure infinite scrolling works properly
+                lowestTweetId = Long.MAX_VALUE;
                 populateHomeTimeline();
             }
         });
@@ -168,6 +171,7 @@ public class TimelineActivity extends AppCompatActivity {
 
                 //Show the newly received data
                 adapter.addTweets(tweetsToAdd);
+                adapter.notifyDataSetChanged();
                 scrollListener.resetState();
                 swipeContainer.setRefreshing(false);
             }
